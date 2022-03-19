@@ -589,4 +589,10 @@ label.valid {
     margin-right: 0px;
     margin-bottom: 10px; } }
 
+    .expense-tracker{
+      text-align: center;
+    padding-top: 30px;
+    margin-bottom: -90px;
+    }
+
 /*# sourceMappingURL=style.css.map */
