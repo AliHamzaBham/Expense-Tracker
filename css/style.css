@@ -590,10 +590,16 @@ label.valid {
     margin-bottom: 10px; } }
 
     .expense-tracker{
-      text-align: center;
-    padding-top: 30px;
-    margin-bottom: -90px;
-    text-decoration: double underline;
+    text-align: center;
+    padding-top: 5px;
+    margin-bottom: -150px;
+    
+    }
+    .expense-tracker a{
+      text-decoration: solid 3px underline;
+      font-family: Poppins;
+      font-size: 20px;
+      color: #222222;
     }
 
 /*# sourceMappingURL=style.css.map */
