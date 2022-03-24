@@ -385,6 +385,11 @@ button:focus,
 .main-nav .navbar-brand {
   padding: 0;
 }
+.navbar-brand img{
+  height: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 .main-nav .navbar-nav .nav-item {
   position: relative;
   font-family: "Open Sans", sans-serif; 
@@ -545,6 +550,7 @@ button:focus,
 }
 .footer-main .block img {
   margin-bottom: 20px;
+  height: 80px;
 }
 .footer-main .block img #small-Apps {
   fill: red;
