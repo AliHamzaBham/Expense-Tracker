@@ -15,7 +15,9 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,7 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
- 
+
 </head>
 
 <body>
@@ -38,11 +40,11 @@
 
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src=""   alt=""  >
-        <span class="d-none d-lg-block">Expense Tracker</span>
+        <img src="" alt="">
+        <span class="d-none d-lg-block">Spendara</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo --> 
+    </div><!-- End Logo -->
 
     <div class="search-bar">
       <form class="search-form d-flex align-items-center" method="POST" action="#">
@@ -59,15 +61,131 @@
             <i class="bi bi-search"></i>
           </a>
         </li><!-- End Search Icon-->
-        
 
+        <!-- Start notification -->
+        <li class="nav-item dropdown">
+
+          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
+            <i class="bi bi-bell"></i>
+            <span class="badge bg-primary badge-number">4</span>
+          </a><!-- End Notification Icon -->
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
+            <li class="dropdown-header">
+              You have 4 new notifications
+              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-exclamation-circle text-warning"></i>
+              <div>
+                <h4>Lorem Ipsum</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>30 min. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-x-circle text-danger"></i>
+              <div>
+                <h4>Atque rerum nesciunt</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>1 hr. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-check-circle text-success"></i>
+              <div>
+                <h4>Sit rerum fuga</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>2 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li class="notification-item">
+              <i class="bi bi-info-circle text-primary"></i>
+              <div>
+                <h4>Dicta reprehenderit</h4>
+                <p>Quae dolorem earum veritatis oditseno</p>
+                <p>4 hrs. ago</p>
+              </div>
+            </li>
+
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li class="dropdown-footer">
+              <a href="#">Show all notifications</a>
+            </li>
+
+          </ul><!-- End Notification Dropdown Items -->
+
+        </li><!-- End Notification Nav -->
+
+
+        <!-- Start Account/profile Dropdown -->
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block toggle ps-2">Hamza Bham</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2"> </span>
           </a><!-- End Profile Iamge Icon -->
-    
+
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+            <li class="dropdown-header">
+              <h6 class="text-center">User Name</h6> 
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+  
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
+                <i class="bi bi-question-circle"></i>
+                <span>Need Help?</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="https://faizahmed1234.github.io/Spendara-website/index.html">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Sign Out</span>
+              </a>
+            </li>
+
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
+
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
@@ -81,14 +199,14 @@
           <span>Dashboard</span>
         </a>
       </li><!-- End Dashboard Nav -->
-       
-      
+
+
       <li class="nav-item">
-        <a class="nav-link collapsed"  href="contact.html">
+        <a class="nav-link collapsed" href="contact.html">
           <i class="bi bi-journal-text"></i><span>Contact</span><i class="bi   ms-auto"></i>
-        </a> 
+        </a>
       </li><!-- End contact Nav -->
-      
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="income.html">
           <i class="bi bi-journal-text"></i><span>Income</span><i class="bi   ms-auto"></i>
@@ -100,7 +218,7 @@
           <i class="bi bi-journal-text"></i><span>Expense</span><i class="bi   ms-auto"></i>
         </a>
       </li> <!-- End expense Nav -->
-          
+
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -142,14 +260,14 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Income <span class="income-time-text" >| Month</span></h5>
+                  <h5 class="card-title">Income <span class="income-time-text">| Month</span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-cash"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>70,000</h6>  
+                      <h6>70,000</h6>
                     </div>
                   </div>
                 </div>
@@ -175,14 +293,14 @@
                 </div>
 
                 <div class="card-body">
-                  <h5 class="card-title">Expense <span class="expense-time-text" >|  Today</span></h5>
+                  <h5 class="card-title">Expense <span class="expense-time-text">| Today</span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-shop"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>3,264</h6>  
+                      <h6>3,264</h6>
                     </div>
                   </div>
                 </div>
@@ -208,15 +326,15 @@
                   </ul>
                 </div>
 
-                <div class="card-body" >
-                  <h5 class="card-title">Remianing <span class="remaining-time-text" >| Month</span></h5>
+                <div class="card-body">
+                  <h5 class="card-title">Remianing <span class="remaining-time-text">| Month</span></h5>
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-wallet"></i>
                     </div>
                     <div class="ps-3">
-                      <h6>66,754</h6>  
+                      <h6>66,754</h6>
                     </div>
                   </div>
 
@@ -227,7 +345,7 @@
 
             <!-- Reports -->
             <div class="col-12">
-              <div class="card"> 
+              <div class="card">
 
                 <div class="card-body">
                   <h5 class="card-title">Reports</h5>
@@ -368,7 +486,7 @@
               </div>
             </div>End Recent Sales -->
 
-              
+
           </div>
         </div><!-- End Left side columns -->
 
@@ -391,7 +509,7 @@
             </div>
 
             <div class="card-body">
-              <h5 class="card-title">Recent Activities <span class="activity-time-text" >| Today</span></h5>
+              <h5 class="card-title">Recent Activities <span class="activity-time-text">| Today</span></h5>
 
               <div class="activity">
 
@@ -538,7 +656,7 @@
             </div>
 
             <div class="card-body pb-0">
-              <h5 class="card-title">Your Spending <span class="spend-time-text" >| Today</span></h5>
+              <h5 class="card-title">Your Spending <span class="spend-time-text">| Today</span></h5>
 
               <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
 
@@ -572,25 +690,25 @@
                         show: false
                       },
                       data: [{
-                          value: 12000,
-                          name: 'Education'
-                        },
-                        {
-                          value: 7000,
-                          name: 'Productivity'
-                        },
-                        {
-                          value: 20000,
-                          name: 'Investments'
-                        },
-                        {
-                          value: 5000,
-                          name: 'Entertainment'
-                        },
-                        {
-                          value: 8000,
-                          name: 'Shopping / food'
-                        } 
+                        value: 12000,
+                        name: 'Education'
+                      },
+                      {
+                        value: 7000,
+                        name: 'Productivity'
+                      },
+                      {
+                        value: 20000,
+                        name: 'Investments'
+                      },
+                      {
+                        value: 5000,
+                        name: 'Entertainment'
+                      },
+                      {
+                        value: 8000,
+                        name: 'Shopping / food'
+                      }
                       ]
                     }]
                   });
@@ -599,7 +717,7 @@
 
             </div>
           </div><!-- End Pie chart / Spendings -->
- 
+
         </div><!-- End Right side columns -->
 
       </div>
@@ -610,11 +728,12 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>Expense Tracker</span></strong>. All Rights Reserved
-    </div> 
+      &copy; Copyright <strong><span>Spendara</span></strong>. All Rights Reserved
+    </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a style="background-color: #4558f1;" href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -626,13 +745,13 @@
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
 
-  
+
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  
+
   <script src="javascript/script.js"></script>
 
-  
+
 </body>
 
 </html>
