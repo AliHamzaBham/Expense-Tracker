@@ -41,7 +41,7 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="" alt="">
-        <span class="d-none d-lg-block">Expense Tracker</span>
+        <span class="d-none d-lg-block">Spendara</span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
@@ -208,30 +208,30 @@
       </li><!-- End contact Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="income.html">
-          <i class="bi bi-journal-text"></i><span>Income</span><i class="bi   ms-auto"></i>
+        <a class="nav-link " data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Transaction</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-      </li> <!-- End income Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link " data-bs-target="#charts-nav" data-bs-toggle="collapse" href=""  >
-          <i class="bi bi-bar-chart"></i><span>Expense</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="charts-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
+        <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
-            <a href="expense.html">
-              <i class="bi bi-circle"></i><span>Add Expense</span>
+            <a href="manage-income.html">
+              <i class="bi bi-circle"></i><span>Income</span>
             </a>
-          </li>  
+          </li><!-- End Income Nav -->
+        </ul>
+        <ul id="components-nav" class="nav-content collapse show" data-bs-parent="#sidebar-nav">
           <li>
             <a href="manage-expense.html">
-              <i class="bi bi-circle"></i><span>Manage Expense</span>
+              <i class="bi bi-circle"></i><span>Expense</span>
             </a>
-          </li>  
+          </ul>
+        </li>
+      </li> <!-- End income Nav -->
+
+      
         </ul>
       </li>    <!-- End expense Nav -->
  
-    </ul>
+    
 
   </aside><!-- End Sidebar-->
 
@@ -243,6 +243,7 @@
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
           <li class="breadcrumb-item">Expense</li>
           <li class="breadcrumb-item">Add Expense</li>
+          <li class="breadcrumb-item"><a href="manage-expense.html">Manage Expense</a></li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
