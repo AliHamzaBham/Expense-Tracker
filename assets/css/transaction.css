@@ -29,7 +29,7 @@ body {
     height: 48px;
     width: 48px;
 }
-
+ 
 .author-info {
     color: #676a6c;
     font-size: 11px;
@@ -130,10 +130,9 @@ a.forum-item-title:hover {
     font-size: 30px;
     margin-top: 8px;
     color: #9b9b9b;
-}
-
+} 
 .forum-item.expense .fa {
-    color: #4558f1;
+    color: #4558f1; 
 }
 .forum-item.income .fa {
     color: #4558f1;
