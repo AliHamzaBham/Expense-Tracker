@@ -1,6 +1,6 @@
 body {
     margin-top: 20px;
-    background: #eee;
+    background: #eee; 
 }
 
 .white-bg {
@@ -87,8 +87,7 @@ body {
 .forum-container,
 .forum-post-container {
     padding: 30px !important;
-}
-
+} 
 .forum-item small {
     color: #999;
 }
@@ -134,20 +133,20 @@ a.forum-item-title:hover {
 }
 
 .forum-item.expense .fa {
-    color: red;
+    color: #4558f1;
 }
 .forum-item.income .fa {
-    color: green;
+    color: #4558f1;
 }
 #category {
     color: black;
 }
 
 .forum-item.expense a.forum-item-title {
-    color: red;
+    color: #F66100;
 } 
 .forum-item.income a.forum-item-title {
-    color: green;
+    color: #2E6917;
 } 
 
 @media (max-width: 992px) {
