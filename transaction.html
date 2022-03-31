@@ -444,6 +444,41 @@
                 <i style="cursor: pointer;"
                   class=" show-btn  bi bi-arrow-down align-items-center justify-content-center"> see more</i>
               </div>
+              <p class="d-flex justify-content-end">
+                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Add transaction
+                </a>
+              </p>
+              <div class="collapse" id="collapseExample">
+                <div class="card card-body">
+                  <form>
+                    <div class="row">
+                      <div class="my-3 col-md-8">
+                        <label for="T_Name" class="form-label ms-2">Transaction Name</label>
+                        <input type="text" class="form-control" id="T_Name" aria-describedby="T_Name">
+                      </div>
+                      <div class="my-3 ms-3 col-md-3">
+                        <label for="T_Amount" class="form-label ms-2">Amount</label>
+                        <input type="number" class="form-control" id="T_Amount">
+                      </div>
+                      <div class="col-md-4">
+                        <label for="T_Category" class="form-label ms-2">Category</label>
+                        <input type="text" class="form-control" id="T_Category" aria-describedby="T_Category">
+                      </div>
+                      <div class="ms-3 col-md-4">
+                        <label for="T_Type" class="form-label ms-2">Transaction type</label>
+                        <select class="form-select form-select mb-3" aria-label=".form-select-sm example">
+                          <option value="1">Expense</option>
+                          <option value="2">Income</option>
+                        </select>
+                    </div>
+                </div>
+                  <div class="me-5 d-flex justify-content-end">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </div>
+                  </form>
+                </div>
+              </div>
             </div><!-- List container End -->
           </div>
         </div>
