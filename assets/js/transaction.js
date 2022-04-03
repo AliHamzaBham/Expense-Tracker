@@ -26,6 +26,31 @@ showBtn.addEventListener('click', () => {
     }, 500);
   
 });
+ 
+// Modal 
+const addBtn = document.querySelector('#add-btn');
+const bgModal = document.querySelector('.bg-modal');
+const aside = document.querySelector('aside');
+const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
+const cross = document.querySelector('.cross');
 
+addBtn.addEventListener('click', () => {
+    bgModal.style.display = "flex";
+    aside.style.display = "none";
+    toggleSidebarBtn.style.display = "none";
+    document.querySelector('body').classList.add('toggle-sidebar');
+}) ;
 
-
+cross.addEventListener('click', () => {
+    bgModal.style.display = "none";
+    aside.style.display = "block";
+    toggleSidebarBtn.style.display = "block";
+    document.querySelector('body').classList.remove('toggle-sidebar');
+});
+bgModal.addEventListener('click', () => {
+    bgModal.style.display = "none";
+    aside.style.display = "block";
+    toggleSidebarBtn.style.display = "block";
+    document.querySelector('body').classList.remove('toggle-sidebar');
+})
+// Modal End

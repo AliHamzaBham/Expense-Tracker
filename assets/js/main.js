@@ -314,6 +314,5 @@
         })
       }).observe(mainContainer);
     }, 200);
-  }
-
+  } 
 })();

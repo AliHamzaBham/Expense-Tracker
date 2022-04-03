@@ -232,26 +232,25 @@
 
             <div class="ibox-content forum-container">
               <!-- List container start -->
-
               <div class="page-title" style="margin-bottom: 40px;">
                 <div class="title-item">
                   <!-- List Conntainer -->
                   <div class="row">
-                    <div class="col-md-8">
-                      <h3>Transactions</h3>
-                    </div> 
-                    
+                    <div class="col-md-12">
+                      <h3 class="col-md-6"> &nbsp; Transactions <i id="add-btn" class="fa fa-plus"> </i></h3>
+                    </div>
+
                   </div>
                   <div class="row">
                     <div id="myBtnContainer" class="col-md-8">
                       <button class="btn active" onclick="filterSelection('all')"> Show all</button>
                       <button class="btn" onclick="filterSelection('cars')"> Expense</button>
                       <button class="btn" onclick="filterSelection('animals')"> Income</button>
-                    </div>                    
-                    <div class="col-md-2 forum-info" >
+                    </div>
+                    <div class="col-md-2 forum-info">
                       <small>Amount</small>
                     </div>
-                    <div class="col-md-2 forum-info" >
+                    <div class="col-md-2 forum-info">
                       <small>Date</small>
                     </div>
                   </div>
@@ -452,48 +451,61 @@
                 <i style="cursor: pointer;"
                   class=" show-btn  bi bi-arrow-down align-items-center justify-content-center"> see more</i>
               </div>
-              <p class="d-flex justify-content-end">
-                <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                  Add transaction
-                </a>
-              </p>
-              <div class="collapse" id="collapseExample">
-                <div class="card card-body">
-                  <form>
-                    <div class="row">
-                      <div class="my-3 col-md-8">
-                        <label for="T_Name" class="form-label ms-2">Transaction Name</label>
-                        <input type="text" class="form-control" id="T_Name" aria-describedby="T_Name">
-                      </div>
-                      <div class="my-3 ms-3 col-md-3">
-                        <label for="T_Amount" class="form-label ms-2">Amount</label>
-                        <input type="number" class="form-control" id="T_Amount">
-                      </div>
-                      <div class="col-md-4">
-                        <label for="T_Category" class="form-label ms-2">Category</label>
-                        <input type="text" class="form-control" id="T_Category" aria-describedby="T_Category">
-                      </div>
-                      <div class="ms-3 col-md-4">
-                        <label for="T_Type" class="form-label ms-2">Transaction type</label>
-                        <select class="form-select form-select mb-3" aria-label=".form-select-sm example">
-                          <option value="1">Expense</option>
-                          <option value="2">Income</option>
-                        </select>
-                    </div>
-                </div>
-                  <div class="me-5 d-flex justify-content-end">
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                  </div>
-                  </form>
-                </div>
-              </div>
             </div><!-- List container End -->
           </div>
         </div>
       </div>
     </div>
   </main><!-- End #main -->
-
+  <div class="bg-modal">
+    <!-- Modal Start -->
+    <div class="modal-contents col-md-6">
+      <i class="fa fa-plus cross" style="transform: rotate(45deg); font-size: 24px;"></i>
+      <form>
+        <!-- Transaction form start -->
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Transaction</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Description</label>
+          <textarea type="text" class="form-control" id="exampleInputPassword1"></textarea>
+        </div>
+        <div class="category-div">
+          <div class="input-group mb-3">
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>Account</option>
+              <option value="1">Bank</option>
+              <option value="2">Mobile Wallet</option>
+              <option value="3">Cash</option>
+            </select>
+          </div>
+          <div class="input-group mb-3">
+            <select class="form-select" id="inputGroupSelect01">
+              <option selected>Category</option>
+              <option value="1">Education</option>
+              <option value="2">Entertainment</option>
+              <option value="3">Investment</option>
+              <option value="3">Shopping</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-check radio-div" >
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+          <label class="form-check-label" for="flexRadioDefault2">
+            Expense
+          </label>
+        </div>
+        <div class="form-check radio-div radio-div-2" >
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+          <label class="form-check-label" for="flexRadioDefault1">
+            Income
+          </label>
+        </div>
+        <button type="submit" class="btn btn-primary submit-btn" >Add transaction</button>
+      </form> <!-- Transaction form end -->
+    </div>
+  </div><!-- Modal End -->
 
   <!-- ======= Footer ======= -->
 
