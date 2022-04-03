@@ -28,4 +28,15 @@ showBtn.addEventListener('click', () => {
 });
 
 
+// Modal Start
+const addBtn = document.querySelector('.add-btn');
+const bgModal = document.querySelector('.bg-modal');
+addBtn.addEventListener('click', () => {
+    bgModal.style.display = "flex";
+})
 
+const close = document.querySelector('.close');
+
+close.addEventListener('click', () => {
+    bgModal.style.display = "none";
+}) 
