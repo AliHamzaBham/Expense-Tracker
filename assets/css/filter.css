@@ -19,11 +19,14 @@
   
   /* The "show" class is added to the filtered elements */
   .show {
-    display: block;
+    display: block !important;
+  }
+  .hide {
+    display: none !important;
   }
   
   /* Style the buttons */
-  .btn {
+  .filter-btn {
     border: none;
     outline: none;
     padding: 12px 16px;

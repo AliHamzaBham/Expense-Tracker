@@ -40,3 +40,7 @@ const close = document.querySelector('.close');
 close.addEventListener('click', () => {
     bgModal.style.display = "none";
 }) 
+
+
+
+
