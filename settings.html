@@ -270,14 +270,10 @@
           <div class="card">
             <div class="card-body pt-3">
               <!-- Bordered Tabs -->
-              <ul class="nav nav-tabs nav-tabs-bordered">
-
-                
-
+              <ul class="nav nav-tabs nav-tabs-bordered">    
                 <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</button>
-                </li>
-                
+                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</button>
+                </li>                
               </ul>
               <div class="tab-content pt-2">
 
@@ -286,6 +282,43 @@
 
                   <!-- Settings Form -->
                   <form>
+                      <div class="ms-4">
+                          <label for="Currency">Currency : </label>
+                    <select id='Currency' class="custom-select ms-3 mb-3 px-3">
+                        <option selected>Rupee</option>
+                        <option value="1">Dollar</option>
+                        <option value="2">Pound</option>
+                      </select>
+                    </div>
+
+                    <div class="ms-4">
+                        <label for="Country">Country : </label>
+                  <select id='Country' class="custom-select ms-4 mb-3 px-4">
+                      <option selected>Pak</option>
+                      <option value="1">Aus</option>
+                      <option value="2">Eng</option>
+                    </select>
+                  </div>
+
+                    <div class="ms-4">
+                        <label for="F_year">Financial Year Starting : </label>
+                  <select id='F_year' class="custom-select ms-3 mb-3 px-4">
+                      <option selected>Jan</option>
+                      <option value="1">Feb</option>
+                      <option value="2">Mar</option>
+                      <option value="3">Apr</option>
+                      <option value="4">May</option>
+                      <option value="5">Jun</option>
+                      <option value="6">Jul</option>
+                      <option value="7">Aug</option>
+                      <option value="8">Sep</option>
+                      <option value="9">Oct</option>
+                      <option value="10">Nov</option>
+                      <option value="11">Dec</option>
+                     
+                    </select>
+                  </div>
+                  
 
                     <div class="row m-3 "> 
                       <div class="col-md-8 col-lg-9">
