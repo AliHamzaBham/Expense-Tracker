@@ -268,13 +268,13 @@ a.forum-item-title:hover {
     position: absolute;
     top: 0;
     background-color: rgba(0, 0, 0, 0.7);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
 .modal-content { 
     width: 500px;
-    height: 500px;
+    height: 560px;
     background-color: white;
     position: relative; 
     margin-top: 40px;
