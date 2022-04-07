@@ -1009,4 +1009,9 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 20px;
   width: 57px;
   font-size: 11px;
+  color: white;
+}
+.badge span{
+  color: white;
+  
 }
