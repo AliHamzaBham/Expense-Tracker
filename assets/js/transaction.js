@@ -87,7 +87,8 @@ transactionForm.addEventListener('submit', (e) => {
     <hr>
   </div><!-- End List Item   -->`
 
-
+  bgModal.style.display  = "none";
+    
 });
 
 
