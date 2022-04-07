@@ -254,12 +254,15 @@ a.forum-item-title:hover {
 /* Modal start */
 .add-btn {
     float: right;
-    color : #4558f1;
+    color : white;
+    background-color: #4558f1;
     cursor: pointer;
 }
 .add-btn:hover {
-    transition: 0.5s;
-    transform: rotate(90deg);
+    transition: 0.5s; 
+    background-color: white;
+    border: 1px solid #4558f1;
+    color: #4558f1;
 }
 
 .bg-modal {
