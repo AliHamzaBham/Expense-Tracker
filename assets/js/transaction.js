@@ -49,6 +49,7 @@ transactionForm.addEventListener('submit', (e) => {
     let title = transInputs[0].value;
     let amount = transInputs[1].value;
     let desc = transInputs[2].value;
+    let category = transInputs[4].value;
     // let type = ('input[name="type"]:checked').value;
 
     //Radio value
@@ -67,7 +68,7 @@ transactionForm.addEventListener('submit', (e) => {
     <div class="row">
       <div class="col-md-8">
         <div class="forum-icon h-100">
-          <i class="fa fa-book"></i>
+          <i class="fa fa-${category}"></i>
         </div>
         <a href="#" class="forum-item-title">${title}</a>
         <div class="forum-sub-title">${desc}</div>
