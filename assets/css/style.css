@@ -1005,3 +1005,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 13px;
   color: #012970;
 }
+.badge{
+  margin-top: 20px;
+  width: 57px;
+  font-size: 11px;
+}
