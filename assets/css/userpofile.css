@@ -1,0 +1,31 @@
+/* Edit Profile form */
+
+.save-changes-btn {
+    margin-top: 30px; 
+    background-color: #4558f1;
+}
+
+.back-to-top {
+    background-color: #4558f1;
+}
+
+.edit-form-container {
+    margin-top: 40px;
+} 
+#edit-prof-form {
+    display: none;
+}
+.edit-prof-btn {
+    margin-top: 40px;
+    outline: none;
+    color: #4558f1;
+    border: 1px  solid #4558f1;
+    border-radius: 4px;
+    padding: 6px 30px 6px 30px; 
+    transition: 0.2s ease-out;
+}
+.edit-prof-btn:hover {
+    background-color: #4558f1;
+    color: white;
+    border-color: white; 
+}

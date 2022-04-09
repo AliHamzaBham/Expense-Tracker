@@ -15,7 +15,9 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +30,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/userpofile.css">
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.2
@@ -153,7 +156,7 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6 class="text-center">User Name</h6> 
+              <h6 class="text-center dropdown-user-name">User Name</h6>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -164,8 +167,8 @@
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
-            </li> 
-            
+            </li>
+
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -179,19 +182,20 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            
-            <li>
-                <a class="dropdown-item d-flex align-items-center" href="settings.html">
-                  <i class="bi bi-gear"></i>
-                  <span>Settings</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="https://faizahmed1234.github.io/Spendara-website/index.html">
+              <a class="dropdown-item d-flex align-items-center" href="settings.html">
+                <i class="bi bi-gear"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center"
+                href="https://faizahmed1234.github.io/Spendara-website/index.html">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -228,13 +232,13 @@
         </a>
       </li> <!-- End income Nav -->
 
-       <!-- End expense Nav -->
+      <!-- End expense Nav -->
 
     </ul>
 
   </aside><!-- End Sidebar-->
 
-  
+
   <main id="main" class="main">
 
     <div class="pagetitle">
@@ -256,9 +260,39 @@
             <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
 
               <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-              <h2>User Name</h2> 
+              <h2 class="main-user-name">User Name</h2>
               <div class="social-links mt-2">
-                <span class="text-muted" >abcd@gmail.com</span>
+                <span class="text-muted main-email">abcd@gmail.com</span>
+              </div>
+              <button class="edit-prof-btn">Edit Profile</button>
+              <div class="col-md-12 edit-form-container" >
+                <form id="edit-prof-form">
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">User Name</label>
+                    <input type="text" class="form-control edit-prof-input">
+                  </div>
+                  <div class="mb-3">
+                    <label for="country" class="form-label">Country</label>
+                    <input type="text" class="form-control edit-prof-input">
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control edit-prof-input">
+                  </div>
+                  <div class="mb-3">
+                    <label for="currency" class="col-md-4 col-lg-3 col-form-label">Currency</label>
+                    <div class="col-md-8 col-lg-9">
+                      <select name="" id="" class="form-control edit-prof-input">
+                        <option value="PKR">PKR</option>
+                        <option value="US$">US Dollars</option>
+                        <option value="EU">Euro</option>
+                        <option value="Pound">Pounds</option>
+                      </select>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary save-changes-btn">Save Changes</button>
+                </form>
+
               </div>
             </div>
           </div>
@@ -273,186 +307,47 @@
               <ul class="nav nav-tabs nav-tabs-bordered">
 
                 <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Profile</button>
-                </li>
-
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Edit Profile</button>
-                </li>
-
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</button>
-                </li>
-
-                <li class="nav-item">
-                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-change-password">Change Password</button>
-                </li>
+                  <button class="nav-link active" data-bs-toggle="tab"
+                    data-bs-target="#profile-overview">Profile</button>
+                </li>  
 
               </ul>
               <div class="tab-content pt-2">
 
-                <div class="tab-pane fade show active profile-overview" id="profile-overview">  
+                <div class="tab-pane fade show active profile-overview" id="profile-overview">
 
                   <h5 class="card-title">Profile Details</h5>
 
-                  <div class="row">
+                  <div class="row"> 
                     <div class="col-lg-3 col-md-4 label ">Full Name</div>
-                    <div class="col-lg-9 col-md-8">User Name</div>
+                    <div class="col-lg-9 col-md-8 user-name">User Name</div>
                   </div>
-   
+
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Country</div>
-                    <div class="col-lg-9 col-md-8">Pakistan</div>
+                    <div class="col-lg-9 col-md-8 country">Pakistan</div>
                   </div>
- 
+
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Email</div>
-                    <div class="col-lg-9 col-md-8">abcd@gmail.com</div>
+                    <div class="col-lg-9 col-md-8 email">abcd@gmail.com</div>
                   </div>
 
                   <div class="row">
                     <div class="col-lg-3 col-md-4 label">Currency</div>
-                    <div class="col-lg-9 col-md-8">PKR</div>
+                    <div class="col-lg-9 col-md-8 currency">PKR</div>
                   </div>
 
                 </div>
+  
+              </div> 
+            </div><!-- End Bordered Tabs -->
 
-                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
-
-                  <!-- Profile Edit Form -->
-                  <form>
-                    <div class="row mb-3">
-                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Profile Image</label>
-                      <div class="col-md-8 col-lg-9">
-                        <img src="assets/img/profile-img.jpg" alt="Profile">
-                        <div class="pt-2">
-                          <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                          <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Full Name</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="fullName" type="text" class="form-control" id="fullName" value="User Name">
-                      </div>
-                    </div>
- 
- 
-
-                    <div class="row mb-3">
-                      <label for="Country" class="col-md-4 col-lg-3 col-form-label">Country</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="country" type="text" class="form-control" id="Country" value="Pakistan">
-                      </div>
-                    </div>
-
-                     
-
-                    <div class="row mb-3">
-                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="email" type="email" class="form-control" id="Email" value="abcd@gmail.com">
-                      </div>
-                    </div>
- 
-
-                    <div class="row mb-3">
-                      <label for="Facebook" class="col-md-4 col-lg-3 col-form-label">Currency</label>
-                      <div class="col-md-8 col-lg-9">
-                        <!-- <input name="facebook" type="text" class="form-control" id="Facebook" value="PKR"> -->
-                        <select name="" id="" class="form-control">
-                          <option value="PKR">PKR</option>
-                          <option value="US$">US Dollars</option>
-                          <option value="EU">Euro</option>
-                          <option value="Pound">Pounds</option>
-                        </select>
-                      </div>
-                    </div>
- 
-
-                    <div class="text-center">
-                      <button style="background-color: #4558f1;" type="submit" class="btn btn-primary">Save Changes</button>
-                    </div>
-                  </form><!-- End Profile Edit Form -->
-
-                </div>
-
-                <div class="tab-pane fade pt-3" id="profile-settings">
-
-                  <!-- Settings Form -->
-                  <form>
-
-                    <div class="row mb-3"> 
-                      <div class="col-md-8 col-lg-9">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="changesMade" checked>
-                          <label class="form-check-label" for="changesMade">
-                            Allow Nottifications
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="newProducts" checked>
-                          <label class="form-check-label" for="newProducts">
-                            Get E-mail for latest updates from us
-                          </label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" id="proOffers">
-                          <label class="form-check-label" for="proOffers">
-                            Apply dark theme
-                          </label>
-                        </div> 
-                      </div>
-                    </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Save Changes</button>
-                    </div>
-                  </form><!-- End settings Form -->
-
-                </div>
-
-                <div class="tab-pane fade pt-3" id="profile-change-password">
-                  <!-- Change Password Form -->
-                  <form>
-
-                    <div class="row mb-3">
-                      <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="password" type="password" class="form-control" id="currentPassword">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="newpassword" type="password" class="form-control" id="newPassword">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="renewpassword" type="password" class="form-control" id="renewPassword">
-                      </div>
-                    </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Change Password</button>
-                    </div>
-                  </form><!-- End Change Password Form -->
-
-                </div>
-
-              </div><!-- End Bordered Tabs -->
-
-            </div>
           </div>
-
         </div>
+
+      </div>
       </div>
     </section>
 
@@ -462,10 +357,11 @@
   <footer id="footer" class="footer">
     <div class="copyright">
       &copy; Copyright <strong><span>Spendara</span></strong>. All Rights Reserved
-    </div>   
+    </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
@@ -479,6 +375,7 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/userprofile.js"></script>
 
 </body>
 
