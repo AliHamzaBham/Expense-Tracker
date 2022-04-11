@@ -89,6 +89,12 @@ transactionForm.addEventListener('submit', (e) => {
   </div><!-- End List Item   -->`
 
   bgModal.style.display  = "none";
+
+
+  for (let i = 0; i < transInputs.length; i++) {
+    transInputs[i].value =  "";
+    
+  }
     
 });
 
