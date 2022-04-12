@@ -63,7 +63,7 @@ transactionForm.addEventListener('submit', (e) => {
     let year = d.getFullYear();
 
 
-    itemContainer.innerHTML += `<div class="forum-item ${type}">
+    itemContainer.innerHTML += `<div class="forum-item ${type} transaction">
     <!-- List Item start -->
     <div class="row" id="transaction">
       <div class="col-md-7">
@@ -90,7 +90,7 @@ transactionForm.addEventListener('submit', (e) => {
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <button class="dropdown-item" onclick = "#s">Edit</button>
-        <button class="dropdown-item" onclick = "remove()">Delete</button>
+        <button class="dropdown-item delete-btn" onclick = "remove()">Delete</button>
       </div>
     </div>
     <hr>
@@ -106,10 +106,20 @@ transactionForm.addEventListener('submit', (e) => {
     
 });
 
-function remove(){
-  var elem = document.getElementById("transaction");
-  elem.remove();
+// function remove(){
+//   var elem = document.getElementById("transaction");
+//   elem.remove();
 
-}
+// }
+
+function remove() {
+  let elems = document.querySelectorAll('.transaction');
+  let deleteBtns = document.querySelectorAll('.delete-btn')
+  for (let i = 0; i < elems.length; i++) {
+       deleteBtns[i].addEventListener('click', () => {
+         elems[i].style.display = "none";
+       });
+  }  
+} 
 
 

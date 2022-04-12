@@ -1,15 +1,19 @@
-.card-item  {
-        padding: 20px;
-        border-radius: 10px;
-        margin-left: -60px;
+/* Account List Start */
+.card-item {
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: -60px;
 }
-.card-item:hover  {
+
+.card-item:hover {
     box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
     cursor: pointer;
 }
+
+/* Card Icon */
 .square {
     width: 50px;
-    height: 50px ;
+    height: 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,38 +21,76 @@
     background-color: #4558f1;
     font-size: 24px;
     border-radius: 50%;
-} 
-.account-name, .type-text, .amount-text {  
+}
+
+/* Card Icon End */
+/* Three columns of List Item */
+.account-name,
+.type-text,
+.amount-text,
+.filter {
     position: absolute;
     width: 84%;
     line-height: 50px;
     margin-left: 60px;
     /* background-color: aqua; */
 }
+
 .type-text {
     text-align: center;
 }
+
 .amount-text {
     text-align: right;
     font-weight: bold;
 }
 
-@media (max-width : 425px)  { 
+.filter {
+    width: 90%;
+    text-align: right;
+    line-height: 20px;
+    margin-top: -10px;
+    font-size: 20px;
+    /* background-color: aqua; */
+}
+
+/* Three columns of List Item  End */
+
+@media (max-width: 768px) {
+    .filter {
+        width: 88%;
+    }
+}
+
+@media (max-width : 425px) {
     .account-name {
         margin-top: -10px;
     }
-    .type-text, .amount-text  {
-        position: static; 
+
+    .type-text,
+    .amount-text {
+        position: static;
         text-align: left;
         margin-top: -30px;
-    } 
+    }
+
     .type-text {
         display: none;
     }
+
     .card-item {
         margin-left: -40px;
     }
-     
+
+    .filter { 
+        width: 74%; 
+    }
+}
+
+@media (max-width: 340px) {
+    .filter {
+        width: 66%;
+    }
 }
 
 /* Add Account Btn Start */
@@ -65,10 +107,13 @@
     box-shadow: none;
     transition: 0.2s;
 }
-@media (max-width: 425px)  {
+
+@media (max-width: 425px) {
     .add-account-container {
         margin-left: -10px;
     }
 }
 
 /* Add Account Btn End */
+
+/* Add Account List End */
