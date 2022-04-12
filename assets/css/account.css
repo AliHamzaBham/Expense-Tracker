@@ -1,58 +1,48 @@
-.add-account-btn {
-    width: 80%;
-    height: 40px;
-    background-color: #4558f1;
-    color: white;
-    outline: none;
-    border: none;
-    border-radius: 20px;
-}
-
-#account-list {
-    list-style: none;
-    margin-left: -60px;
-}
-
-.card-right-item {
-    padding: 0px 20px 0px 20px;
-    height: 80px;
-    border-radius: 10px;
-    display: grid;
-    grid-template-columns: 1fr 6fr 4fr 5fr;
-    align-items: center;
-}
-
-.card-right-item:hover {
-    cursor: pointer;
-    box-shadow: 0px 0px 20px 4px rgba(0, 0, 0, 0.1);
-}
-
-@media (max-width : 768px) {
-    #account-list {
+.card-item  {
+        padding: 20px;
+        border-radius: 10px;
         margin-left: -40px;
-    }
 }
-
+.card-item:hover  {
+    box-shadow: 0px 0px 10px 4px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+}
 .square {
     width: 50px;
-    height: 50px;
-    font-size: 24px;
-    background-color: #4558f1;
-    color: white;
+    height: 50px ;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
+    background-color: #4558f1;
+    font-size: 24px;
     border-radius: 50%;
-    margin-top: -10px;
+} 
+.account-name, .type-text, .amount-text {  
+    position: absolute;
+    width: 84%;
+    line-height: 50px;
+    margin-left: 60px;
+    /* background-color: aqua; */
 }
-
-.account-name {
-    line-height: 80px;
+.type-text {
+    text-align: center;
 }
-
 .amount-text {
-    font-weight: bold;
-    font-size: 20px;
-    line-height: 80px;
     text-align: right;
+    font-weight: bold;
+}
+
+@media (max-width : 425px)  { 
+    .account-name {
+        margin-top: -10px;
+    }
+    .type-text, .amount-text  {
+        position: static; 
+        text-align: left;
+        margin-top: -30px;
+    } 
+    .type-text {
+        display: none;
+    }
 }
