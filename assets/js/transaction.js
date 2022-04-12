@@ -65,8 +65,8 @@ transactionForm.addEventListener('submit', (e) => {
 
     itemContainer.innerHTML += `<div class="forum-item ${type}">
     <!-- List Item start -->
-    <div class="row">
-      <div class="col-md-8">
+    <div class="row" id="transaction">
+      <div class="col-md-7">
         <div class="forum-icon h-100">
           <i class="fa fa-${category}"></i>
         </div>
@@ -84,6 +84,14 @@ transactionForm.addEventListener('submit', (e) => {
       <div class="col-md-2 forum-info">
         <p>27-3-2022</p>
       </div>
+      <div class="col-md-1 dropdown">
+      <button class="btn dropdown-bs-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <i class="bi bi-three-dots-vertical"></i>
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <button class="dropdown-item" onclick = "#s">Edit</button>
+        <button class="dropdown-item" onclick = "remove()">Delete</button>
+      </div>
     </div>
     <hr>
   </div><!-- End List Item   -->`
@@ -97,5 +105,10 @@ transactionForm.addEventListener('submit', (e) => {
   }
     
 });
+function remove(){
+  var elem = document.getElementById("transaction");
+  elem.remove();
+
+}
 
 
