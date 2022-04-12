@@ -99,7 +99,7 @@ transactionForm.addEventListener('submit', (e) => {
   bgModal.style.display  = "none";
 
 
-  for (let i = 0; i < transInputs.length; i++) {
+  for (let i = 0; i < transInputs.length - 4; i++) {
     transInputs[i].value =  "";
     
   }
