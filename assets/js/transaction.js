@@ -105,6 +105,7 @@ transactionForm.addEventListener('submit', (e) => {
   }
     
 });
+
 function remove(){
   var elem = document.getElementById("transaction");
   elem.remove();
