@@ -13,7 +13,7 @@ addAccountBtn.addEventListener('click', () => {
             <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
           </ul>
         </div><!--Account List Item options End  -->
-        <span class="square bi bi-wallet">
+        <span class="square bi bi-wallet" style="background-color:#4558f1;" >
         </span>
         <h5 class="account-name"> Account Name</h5>
         <p class="type-text text-muted">Type</p>
@@ -23,7 +23,6 @@ addAccountBtn.addEventListener('click', () => {
 });
 
 // To Delete List Item Satrt
- 
-
+  
 // To Delete List Item End
 

@@ -259,22 +259,88 @@
 
           <div class="card-right">
             <div class="card-body">
-              <ul id="account-list"><!--Account List Satrt  --> 
-                  
-              </ul><!--Account List End  -->
+              <ul id="account-list">
+                <!--Account List Satrt  -->
+
+              </ul>
+              <!--Account List End  -->
 
               <!--Add Account Btn Start  -->
-              <div class="card-item card add-account-container add-account-btn">
+              <div class="card-item card add-account-container add-account-btn" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
                 <h5> + Add Account</h5>
-              </div><!--Add Account Btn End  -->
+              </div>
+              <!--Add Account Btn End  -->
             </div>
           </div>
-
         </div>
       </div>
     </section>
 
   </main><!-- End #main -->
+
+
+
+  <!-- Add Account modal form Start -->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header" style="background-color: #4558f1; color: white;">
+          <h5 class="modal-title">Add Account</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form style="padding: 20px;">
+            <div class="modal-body">
+              <div style="display: grid; grid-template-columns: 3fr 1fr; grid-gap: 30px;">
+                <div class="form-group">
+                  <label for="account">Account</label>
+                  <input type="text" class="form-control" placeholder="Account Name">
+                </div>
+                <div class="form-group">
+                  <label for="account">Color</label>
+                  <input type="color" class="form-control" value="#4558f1">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="Type">Type</label>
+                <select name="" class="form-select form-control" id="">
+                  <option value="1">General</option>
+                  <option value="2">Cash</option>
+                  <option value="3">Current Account</option>
+                </select>
+              </div>
+              <div style="display: grid; grid-template-columns: 3fr 1fr; grid-gap: 30px;">
+                <div class="form-group">
+                  <label for="password1">Amount</label>
+                  <input type="password" class="form-control" id="password2" placeholder="Starting Amount">
+                </div>
+                <div class="form-group">
+                  <label for="Type">Currency</label>
+                  <select name="" class="form-select form-control" id="">
+                    <option value="1">PKR</option> 
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer border-top-0 justify-content-center">
+              <button type="submit" class="btn btn-primary submit-btn" style="background-color: #4558f1;">Save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Button trigger modal -->
+
+  <style>
+    .form-group {
+      margin-top: 10px;
+    }  
+  </style>
+  <!-- Add Account modal form End -->
 
 
   <!-- ======= Footer ======= -->

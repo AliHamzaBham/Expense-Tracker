@@ -18,17 +18,18 @@
     justify-content: center;
     align-items: center;
     color: white;
-    background-color: #4558f1;
+    /* background-color: #4558f1; */
     font-size: 24px;
     border-radius: 50%;
+    margin-top: -10px;
 }
 
 /* Card Icon End */
 /* Three columns of List Item */
 .account-name,
 .type-text,
-.amount-text,
-.filter {
+.amount-text 
+ {
     position: absolute;
     width: 84%;
     line-height: 50px;
@@ -45,23 +46,15 @@
     font-weight: bold;
 }
 
-.filter {
-    width: 90%;
+.filter { 
     text-align: right;
     line-height: 20px;
     margin-top: -10px;
-    font-size: 20px;
-    /* background-color: aqua; */
+    font-size: 20px; 
 }
 
 /* Three columns of List Item  End */
-
-@media (max-width: 768px) {
-    .filter {
-        width: 88%;
-    }
-}
-
+ 
 @media (max-width : 425px) {
     .account-name {
         margin-top: -10px;
@@ -81,18 +74,8 @@
     .card-item {
         margin-left: -40px;
     }
-
-    .filter { 
-        width: 74%; 
-    }
-}
-
-@media (max-width: 340px) {
-    .filter {
-        width: 66%;
-    }
-}
-
+ 
+} 
 /* Add Account Btn Start */
 
 .add-account-container {
@@ -117,3 +100,5 @@
 /* Add Account Btn End */
 
 /* Add Account List End */
+
+
