@@ -1,8 +1,24 @@
-// To populate List
-const addAccountBtn = document.querySelector('.add-account-btn');
-const accountList = document.querySelector('#account-list');
+ 
+ 
 
-addAccountBtn.addEventListener('click', () => {
+// To Delete List Item Satrt
+
+// To Delete List Item End
+
+// To submit add account form and make an account in the list
+const accountList = document.querySelector('#account-list');
+const closeBtn = document.querySelector('.btn-close');//Close form btn
+const addAccountForm = document.querySelector('#add-account-form');//form
+const inputs = document.querySelectorAll('.account-input'); //All the inputs
+
+addAccountForm.addEventListener('submit' , ($event) => {
+    $event.preventDefault();
+
+    let name = inputs[0].value;
+    let color = inputs[1].value;
+    let type = inputs[2].value ;
+    let amount = inputs[3].value;
+
     accountList.innerHTML +=
         `<!--Card Item Start  -->
       <li class="card-item card"> 
@@ -13,16 +29,15 @@ addAccountBtn.addEventListener('click', () => {
             <li><a class="dropdown-item text-danger" href="#">Delete</a></li>
           </ul>
         </div><!--Account List Item options End  -->
-        <span class="square bi bi-wallet" style="background-color:#4558f1;" >
+        <span class="square bi bi-wallet" style="background-color:${color};" >
         </span>
-        <h5 class="account-name"> Account Name</h5>
-        <p class="type-text text-muted">Type</p>
-        <h5 class="amount-text">PKR 22,000</h5>
+        <h5 class="account-name">${name}</h5>
+        <p class="type-text text-muted">${type}</p>
+        <h5 class="amount-text">PKR ${amount}</h5>
       </li>
       <!--Card Item End  -->`
+
+    alert('submitted');
+    closeBtn.click();//Clicking close btn after subitting form
+ 
 });
-
-// To Delete List Item Satrt
-  
-// To Delete List Item End
-

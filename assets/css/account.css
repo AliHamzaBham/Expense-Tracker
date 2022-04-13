@@ -102,3 +102,31 @@
 /* Add Account List End */
 
 
+/* Modal Start  */
+
+.modal-header {
+    background-color: #4558f1; color: white
+} 
+ 
+.two-inputs-container  {
+    display: grid; grid-template-columns: 3fr 1fr; grid-gap: 30px;
+}
+
+@media (max-width: 425px)  {
+    .two-inputs-container  {
+        display: grid; grid-template-columns: 1fr; grid-gap: 30px;
+    }
+    .modal-content {
+        width: 100%;
+        height: 660px;
+    }
+}
+.submit-btn {
+    background-color: #4558f1;
+}
+
+#add-account-form {
+    padding: 20px;
+}
+
+/* Modal End */
