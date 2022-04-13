@@ -36,8 +36,7 @@ addAccountForm.addEventListener('submit' , ($event) => {
         <h5 class="amount-text">PKR ${amount}</h5>
       </li>
       <!--Card Item End  -->`
-
-    alert('submitted');
+ 
     closeBtn.click();//Clicking close btn after subitting form
  
 });
