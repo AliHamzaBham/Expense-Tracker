@@ -15,7 +15,9 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -153,7 +155,7 @@
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6 class="text-center">User Name</h6> 
+              <h6 class="text-center">User Name</h6>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -164,8 +166,8 @@
                 <i class="bi bi-person"></i>
                 <span>My Profile</span>
               </a>
-            </li> 
-            
+            </li>
+
             <li>
               <hr class="dropdown-divider">
             </li>
@@ -179,19 +181,20 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-            
-            <li>
-                <a class="dropdown-item d-flex align-items-center" href="settings.html">
-                  <i class="bi bi-gear"></i>
-                  <span>Settings</span>
-                </a>
-              </li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="https://faizahmed1234.github.io/Spendara-website/index.html">
+              <a class="dropdown-item d-flex align-items-center" href="settings.html">
+                <i class="bi bi-gear"></i>
+                <span>Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center"
+                href="https://faizahmed1234.github.io/Spendara-website/index.html">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -226,15 +229,21 @@
         <a class="nav-link collapsed" href="transaction.html">
           <i class="bi bi-journal-text"></i><span>Transaction</span><i class="bi   ms-auto"></i>
         </a>
-      </li> <!-- End income Nav -->
+      </li> <!-- End Transaction Nav -->
 
-       <!-- End expense Nav -->
+      <!-- End expense Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="account.html">
+          <i class="bi bi-bank"></i><span>Accounts</span><i class="bi   ms-auto"></i>
+        </a>
+      </li><!-- End Account Nav -->
 
     </ul>
 
   </aside><!-- End Sidebar-->
 
-  
+
   <main id="main" class="main">
 
     <div class="pagetitle">
@@ -256,21 +265,22 @@
           <div class="card">
             <div class="card-body pt-3">
               <!-- Bordered Tabs -->
-              <ul class="nav nav-tabs nav-tabs-bordered">    
+              <ul class="nav nav-tabs nav-tabs-bordered">
                 <li class="nav-item">
-                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-settings">Settings</button>
-                </li>                
+                  <button class="nav-link active" data-bs-toggle="tab"
+                    data-bs-target="#profile-settings">Settings</button>
+                </li>
               </ul>
               <div class="tab-content pt-2">
 
-                
+
                 <div class="tab-pane fade show active" id="profile-settings">
 
                   <!-- Settings Form -->
                   <form>
-                      <div class="ms-4">
-                          <label for="Currency">Currency : </label>
-                    <select id='Currency' class="custom-select ms-3 mb-3 px-3 rounded-pill">
+                    <div class="ms-4">
+                      <label for="Currency">Currency : </label>
+                      <select id='Currency' class="custom-select ms-3 mb-3 px-3 rounded-pill">
                         <option selected>Rupee</option>
                         <option value="1">Dollar</option>
                         <option value="2">Pound</option>
@@ -278,35 +288,35 @@
                     </div>
 
                     <div class="ms-4">
-                        <label for="Country">Country : </label>
-                  <select id='Country' class="custom-select ms-4 mb-3 px-4 rounded-pill">
-                      <option selected>Pak</option>
-                      <option value="1">Aus</option>
-                      <option value="2">Eng</option>
-                    </select>
-                  </div>
+                      <label for="Country">Country : </label>
+                      <select id='Country' class="custom-select ms-4 mb-3 px-4 rounded-pill">
+                        <option selected>Pak</option>
+                        <option value="1">Aus</option>
+                        <option value="2">Eng</option>
+                      </select>
+                    </div>
 
                     <div class="ms-4">
-                        <label for="F_year">Financial Year Starting : </label>
-                  <select id='F_year' class="custom-select ms-3 mb-3 px-4 rounded-pill">
-                      <option selected>Jan</option>
-                      <option value="1">Feb</option>
-                      <option value="2">Mar</option>
-                      <option value="3">Apr</option>
-                      <option value="4">May</option>
-                      <option value="5">Jun</option>
-                      <option value="6">Jul</option>
-                      <option value="7">Aug</option>
-                      <option value="8">Sep</option>
-                      <option value="9">Oct</option>
-                      <option value="10">Nov</option>
-                      <option value="11">Dec</option>
-                     
-                    </select>
-                  </div>
-                  
+                      <label for="F_year">Financial Year Starting : </label>
+                      <select id='F_year' class="custom-select ms-3 mb-3 px-4 rounded-pill">
+                        <option selected>Jan</option>
+                        <option value="1">Feb</option>
+                        <option value="2">Mar</option>
+                        <option value="3">Apr</option>
+                        <option value="4">May</option>
+                        <option value="5">Jun</option>
+                        <option value="6">Jul</option>
+                        <option value="7">Aug</option>
+                        <option value="8">Sep</option>
+                        <option value="9">Oct</option>
+                        <option value="10">Nov</option>
+                        <option value="11">Dec</option>
 
-                    <div class="row m-3 "> 
+                      </select>
+                    </div>
+
+
+                    <div class="row m-3 ">
                       <div class="col-md-8 col-lg-9">
                         <div class="form-check">
                           <input class="form-check-input" type="checkbox" id="changesMade" checked>
@@ -325,7 +335,7 @@
                           <label class="form-check-label" for="proOffers">
                             Apply dark theme
                           </label>
-                        </div> 
+                        </div>
                       </div>
                     </div>
 
@@ -336,7 +346,7 @@
 
                 </div>
 
-                
+
 
               </div><!-- End Bordered Tabs -->
 
@@ -353,10 +363,11 @@
   <footer id="footer" class="footer">
     <div class="copyright">
       &copy; Copyright <strong><span>Spendara</span></strong>. All Rights Reserved
-    </div>   
+    </div>
   </footer><!-- End Footer -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
