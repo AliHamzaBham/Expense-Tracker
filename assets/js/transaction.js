@@ -109,24 +109,6 @@ transactionForm.addEventListener('submit', (e) => {
   }
     
 });
-<<<<<<< Updated upstream
-
-function remove(){
-  var elem = document.getElementById("transaction");
-  elem.remove();
-
-}
-
-// function remove() {
-//   let elems = document.querySelectorAll('.transaction');
-//   let deleteBtns = document.querySelectorAll('.delete-btn')
-//   for (let i = 0; i < elems.length; i++) {
-//        deleteBtns[i].addEventListener('click', () => {
-//          elems[i].style.display = "none";
-//        });
-//   }  
-// } 
-=======
 function remove(event){
   
   if (event.target.classList.contains("delbttn")){
@@ -135,6 +117,4 @@ function remove(event){
 }
 
 document.addEventListener('click',remove)
->>>>>>> Stashed changes
-
 
