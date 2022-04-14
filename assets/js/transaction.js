@@ -90,11 +90,11 @@ transactionForm.addEventListener('submit', (e) => {
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <button class="dropdown-item" onclick = "#">Edit</button>
-        <button class="dropdown-item delbttn">Delete</button>
+        <button class="dropdown-item delbttn" style="color:red;">Delete</button>
 
       </div>
     </div>
-    <hr>
+    <hr>  
   </div><!-- End List Item   -->`
 
   bgModal.style.display  = "none";
