@@ -65,7 +65,7 @@ transactionForm.addEventListener('submit', (e) => {
 
     itemContainer.innerHTML += `<div class="forum-item ${type} transaction">
     <!-- List Item start -->
-    <div class="row" id="transaction">
+    <div class="row"">
       <div class="col-md-7">
         <div class="forum-icon h-100">
           <i class="fa fa-${category}"></i>
@@ -90,7 +90,11 @@ transactionForm.addEventListener('submit', (e) => {
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <button class="dropdown-item" onclick = "#s">Edit</button>
+<<<<<<< Updated upstream
         <button class="dropdown-item delete-btn" onclick = "remove()">Delete</button>
+=======
+        <button class="dropdown-item delbttn">Delete</button>
+>>>>>>> Stashed changes
       </div>
     </div>
     <hr>
@@ -105,21 +109,12 @@ transactionForm.addEventListener('submit', (e) => {
   }
     
 });
-
-function remove(){
-  var elem = document.getElementById("transaction");
-  elem.remove();
-
+function remove(event){
+  
+  if (event.target.classList.contains("delbttn")){
+    event.target.parentElement.parentElement.parentElement.remove()
+  }
 }
 
-// function remove() {
-//   let elems = document.querySelectorAll('.transaction');
-//   let deleteBtns = document.querySelectorAll('.delete-btn')
-//   for (let i = 0; i < elems.length; i++) {
-//        deleteBtns[i].addEventListener('click', () => {
-//          elems[i].style.display = "none";
-//        });
-//   }  
-// } 
-
+document.addEventListener('click',remove)
 
