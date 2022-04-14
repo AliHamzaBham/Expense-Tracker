@@ -89,12 +89,9 @@ transactionForm.addEventListener('submit', (e) => {
       <i class="bi bi-three-dots-vertical"></i>
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <button class="dropdown-item" onclick = "#s">Edit</button>
-<<<<<<< Updated upstream
-        <button class="dropdown-item delete-btn" onclick = "remove()">Delete</button>
-=======
+        <button class="dropdown-item" onclick = "#">Edit</button>
         <button class="dropdown-item delbttn">Delete</button>
->>>>>>> Stashed changes
+
       </div>
     </div>
     <hr>
