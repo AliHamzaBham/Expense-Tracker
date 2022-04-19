@@ -263,12 +263,14 @@
                     </div>
 
                   </div>
+                  <!-- filter -->
                   <div class="row">
                     <div id="myBtnContainer" class="col-md-7">
                       <button class="filter-btn btn active" onclick="filterSelection('all')"> Show all</button>
                       <button class="filter-btn btn" onclick="filterSelection('expense')"> Expense</button>
                       <button class="filter-btn btn" onclick="filterSelection('income')"> Income</button>
                     </div>
+
                     <div class="col-md-2 forum-info">
                       <small>Amount</small>
                     </div>
@@ -283,6 +285,27 @@
               <div id="item-container">
 
               </div>
+              <!-- pagination -->
+              <link rel="stylesheet" href="./assets/css/pagination.css">
+    <div class="pagination"> 
+        <a class="btn" href="#" >&laquo;</a>
+        <a class="btn active" href="#" >1</a>
+        <a class="btn" href="#">2</a>
+        <a class="btn" href="#">3</a>
+        <a class="btn" href="#">4</a>
+        <a class="btn" href="#">&raquo;</a>
+    
+      </div>
+
+      <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    
+      <script type="text/javascript">
+        $(document).on('click', 'div a', function(){
+            console.log ($(this))
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+        
+    </script>
 
               <!-- <div>
                 <i style="cursor: pointer;"
