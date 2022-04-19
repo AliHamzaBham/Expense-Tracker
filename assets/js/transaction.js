@@ -30,16 +30,12 @@
 
 // Modal Start
 const addBtn = document.querySelector('.add-btn');
-const bgModal = document.querySelector('.bg-modal');
-addBtn.addEventListener('click', () => {
-    bgModal.style.display = "flex";
-})
-
-const close = document.querySelector('.close');
-
-close.addEventListener('click', () => {
-    bgModal.style.display = "none";
-})
+const bgModal = document.querySelector('.bg-modal'); 
+ 
+ 
+//Radio value
+let radios = document.getElementsByName("options");
+let type = Array.from(radios).find(radio => radio.checked).value;
 
 const transactionForm = document.querySelector('.transaction-form');
 const transInputs = document.querySelectorAll('.trans-input')
@@ -53,7 +49,7 @@ transactionForm.addEventListener('submit', (e) => {
     // let type = ('input[name="type"]:checked').value;
 
     //Radio value
-    let radios = document.getElementsByName("type");
+    let radios = document.getElementsByName("options");
     let type = Array.from(radios).find(radio => radio.checked).value;
 
     //Date
@@ -96,11 +92,10 @@ transactionForm.addEventListener('submit', (e) => {
     </div>
     <hr>  
   </div><!-- End List Item   -->`
+ 
+  document.querySelector('.btn-close').click();
 
-  bgModal.style.display  = "none";
-
-
-  for (let i = 0; i < transInputs.length - 4; i++) {
+  for (let i = 0; i < transInputs.length - 2; i++) {
     transInputs[i].value =  "";
     
   }
@@ -115,3 +110,33 @@ function remove(event){
 
 document.addEventListener('click',remove)
 
+// Transaction Options
+const modalHeader = document.querySelector('.modal-header');
+const modalTitle = document.querySelector('.modal-title')
+radios[0].addEventListener('focus' , () => { 
+  //To change color of modal header
+  modalHeader.classList.remove('bg-success');
+  modalHeader.classList.remove('bg-primary');
+  modalHeader.classList.add('bg-danger'); 
+  //To change input fields according to transaction option
+  document.querySelector('.dropdown-div-1').style.display = "grid";
+  document.querySelector('.dropdown-div-2').style.display = "none";
+});
+radios[1].addEventListener('focus' , () => {
+  //To change color of modal header
+  modalHeader.classList.remove('bg-danger');
+  modalHeader.classList.remove('bg-primary');
+  modalHeader.classList.add('bg-success') 
+  //To change input fields according to transaction option
+  document.querySelector('.dropdown-div-1').style.display = "grid";
+  document.querySelector('.dropdown-div-2').style.display = "none";
+});
+radios[2].addEventListener('focus' , () => {
+  //To change color of modal header
+  modalHeader.classList.remove('bg-danger');
+  modalHeader.classList.remove('bg-success');
+  modalHeader.classList.add('bg-primary') ;
+  //To change input fields according to transaction option
+  document.querySelector('.dropdown-div-1').style.display = "none";
+  document.querySelector('.dropdown-div-2').style.display = "grid"; 
+});
