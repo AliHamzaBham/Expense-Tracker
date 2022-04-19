@@ -230,13 +230,13 @@
           <i class="bi bi-menu-button-wide"></i><span>Transaction</span>
         </a>
       </li> <!-- End transaction Nav -->
-       
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="account.html">
           <i class="bi bi-bank"></i><span>Accounts</span><i class="bi   ms-auto"></i>
         </a>
       </li><!-- End Account Nav -->
-       
+
 
     </ul>
 
@@ -257,8 +257,9 @@
                   <!-- List Conntainer -->
                   <div class="row">
                     <div class="col-md-12">
-                      <h3 style="margin-bottom: 40px;">Transactions <button class="btn btn-primary add-btn"><i
-                            class="fa fa-plus"></i> Add Transaction</button> </h3>
+                      <h3 style="margin-bottom: 40px;">Transactions <button class="btn btn-primary add-btn"
+                          data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="fa fa-plus"></i> Add
+                          Transaction</button> </h3>
                     </div>
 
                   </div>
@@ -316,55 +317,85 @@
       </div>
     </div>
   </main><!-- End #main -->
-  <div class="bg-modal transaction-form">
-    <div class="modal-content">
-      <i class="fa fa-plus close" style="transform: rotate(45deg); font-size: 24px;"></i>
-      <form>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Transaction</label>
-          <input type="text" class="form-control trans-input" required>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog  ">
+      <div class="modal-content">
+        <div class="modal-header bg-danger">
+          <h5 class="modal-title text-white" id="exampleModalLabel">Add Transaction</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="mb-3">
-          <label for="amount" class="form-label">Amount</label>
-          <input type="number" class="form-control trans-input" required>
+        <div class="modal-body">
+          <form class="transaction-form">
+            <div class="m-4">
+              <div class="btn-group text-center w-100" style="margin-bottom: 20px;">
+                <input type="radio" class="btn-check option" name="options" id="radio1" checked value="expense">
+                <label class="btn btn-outline-danger" for="radio1">Expense</label>
+
+                <input type="radio" class="btn-check option" name="options" id="radio2" value="income">
+                <label class="btn btn-outline-success" for="radio2">Income</label>
+
+                <input type="radio" class="btn-check option" name="options" id="radio3" value="transfer">
+                <label class="btn btn-outline-primary" for="radio3">Transfer</label>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Transaction</label>
+                <input type="text" class="form-control trans-input" required>
+              </div>
+              <div class="mb-3">
+                <label for="amount" class="form-label">Amount</label>
+                <input type="number" class="form-control trans-input" required>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Description</label>
+                <textarea type="text" class="form-control trans-input" required></textarea>
+              </div>
+              <div class="dropdown-div dropdown-div-1">
+                <select class="form-select trans-input" aria-label="Default select example" required>
+                  <option selected disabled>Account</option>
+                  <option value="1">Bank Account</option>
+                  <option value="2">Mobile Wallet</option>
+                  <option value="3">Cash</option>
+                </select>
+                <select class="form-select trans-input" aria-label="Default select example" required>
+                  <option selected disabled>Category</option>
+                  <option value="book">Education</option>
+                  <option value="film">Entertainment</option>
+                  <option value="money">Investment</option>
+                  <option value="4">Shopping</option>
+                  <option value="5">Other</option>
+                </select>
+              </div>
+              <!-- For transfer option -->
+              <div class="dropdown-div dropdown-div-2">
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example"> 
+                    <option value="general">General</option>
+                    <option value="cash">Cash</option>
+                    <option value="bank">Bank</option>
+                  </select>
+                  <label for="floatingSelect">From Account</label>
+                </div>
+                <div class="form-floating">
+                  <select class="form-select" id="floatingSelect" aria-label="Floating label select example"> 
+                    <option value="general">General</option>
+                    <option value="cash">Cash</option>
+                    <option value="bank">Bank</option>
+                  </select>
+                  <label for="floatingSelect">To Account</label>
+                </div>
+              </div> 
+              <button type="submit" class="btn btn-primary submit-btn">Submit</button>
+          </form>
         </div>
-        <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Description</label>
-          <textarea type="text" class="form-control trans-input" id="exampleInputPassword1" required></textarea>
-        </div>
-        <div class="category-div">
-          <select class="form-select trans-input" aria-label="Default select example" required>
-            <option selected disabled>Account</option>
-            <option value="1">Bank Account</option>
-            <option value="2">Mobile Wallet</option>
-            <option value="3">Cash</option>
-          </select>
-          <select class="form-select trans-input" aria-label="Default select example" required>
-            <option selected disabled>Category</option>
-            <option value="book">Education</option>
-            <option value="film">Entertainment</option>
-            <option value="money">Investment</option>
-            <option value="4">Shopping</option>
-            <option value="5">Other</option>
-          </select>
-        </div>
-        <div class="form-check radio-div">
-          <input class="form-check-input trans-input" name="type" type="radio" value="expense" id="flexCheckChecked"
-            checked>
-          <label class="form-check-label" for="flexCheckChecked">
-            Expense
-          </label>
-        </div>
-        <div class="form-check radio-div radio-div-2">
-          <input class="form-check-input trans-input" name="type" type="radio" value="income" id="flexCheckDefault">
-          <label class="form-check-label" for="flexCheckDefault">
-            Income
-          </label>
-        </div>
-        <button type="submit" class="btn btn-primary submit-btn">Submit</button>
-      </form>
+      </div>
     </div>
   </div>
+
+
 
   <!-- ======= Footer ======= -->
 
