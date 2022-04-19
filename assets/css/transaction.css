@@ -272,7 +272,7 @@ form {
     display: grid;
     grid-template: 1fr 1fr / 1fr 1fr;
     grid-gap: 10px;
-} 
+}
 .dropdown-div-2 {
     display: none;
 }
@@ -284,6 +284,15 @@ form {
 .submit-btn:hover {
     background-color: white;
     color: #4558f1;
+} 
+
+@media (max-width : 425px)  {
+    .dropdown-div {
+        grid-template: 1fr 1fr / 1fr;
+    } 
+    .submit-btn {
+        margin-top: 40px;
+    }
 }
  
   
